@@ -1,3 +1,4 @@
+
 function add() {
 	
 	var red = new fabric.Rect({
@@ -11,6 +12,64 @@ canvas.setBackgroundColor({source: image.src, repeat: 'repeat'}, function () {
 
 
   }
+  
+  
+  
+function addImg(){
+    fabric.Image.fromURL(myImg, function(oImg) {
+        var l = 100;
+        var t = 100;                
+            oImg.scale(0.2);
+        oImg.set({'left':l});
+                  oImg.set({'top':t});
+            canvas.add(oImg);
+        });
+}
+
+
+function addImg1(){
+    fabric.Image.fromURL(myImg1, function(oImg) {
+        var l = 100;
+        var t = 100;                
+            oImg.scale(0.2);
+        oImg.set({'left':l});
+                  oImg.set({'top':t});
+            canvas.add(oImg);
+        });
+}
+
+function addImg2(){
+    fabric.Image.fromURL(myImg2, function(oImg) {
+        var l = 100;
+        var t = 100;                
+            oImg.scale(0.2);
+        oImg.set({'left':l});
+                  oImg.set({'top':t});
+            canvas.add(oImg);
+        });
+}
+
+function addImg3(){
+    fabric.Image.fromURL(myImg3, function(oImg) {
+        var l = 100;
+        var t = 100;                
+            oImg.scale(0.2);
+        oImg.set({'left':l});
+                  oImg.set({'top':t});
+            canvas.add(oImg);
+        });
+}
+
+function addImg4(){
+    fabric.Image.fromURL(myImg4, function(oImg) {
+        var l = 100;
+        var t = 100;                
+            oImg.scale(0.2);
+        oImg.set({'left':l});
+                  oImg.set({'top':t});
+            canvas.add(oImg);
+        });
+}
 
 var image;
 var fn;
@@ -94,16 +153,32 @@ function addc(){
   var $ = function(id){return document.getElementById(id)};
 
   var canvas = this.__canvas = new fabric.Canvas('c');
-  
+
+  var myImg1 = 'http://cdn.shopify.com/s/files/1/1061/1924/products/Emoji_Icon_-_Smiling_grande.png?v=1513251031';
+  var myImg2 = 'https://lh3.googleusercontent.com/WJXZNFAkSh7Q3Y6an5ZMM6HfU9zP3zQU_R-DZDkbembg9cHkxLgkq37OuXDwZRH9z8Q=w170';
+  var myImg3 = 'http://www.hey.fr/tools/emoji/ios_emoji_face_throwing_a_kiss.png';
+  var myImg4 = 'http://www.clker.com/cliparts/r/x/4/4/i/a/red-glossy-heart.svg';
+  var myImg= 'https://www.easypeasypatches.com/wp-content/uploads/2016/08/cache_240_240_0_100_80_16777215_emoji-cool.png';
 
     var addmore = $('addmore');
-
-      addmore.onclick = add;
-	  
-	  
+	addmore.onclick = add;
+	   
 	var addcross = $('addcross');
 	addcross.onclick = addc;
 	
+	var addi=$('addImage');
+	addi.onclick =addImg;
+	
+	var addi1=$('addImage1');
+	addi1.onclick =addImg1;
+	var addi2=$('addImage2');
+	addi2.onclick =addImg2;
+	var addi3=$('addImage3');
+	addi3.onclick =addImg3;
+	var addi4=$('addImage4');
+	addi4.onclick =addImg4;
+	
+
 
 
 canvas.on('mouse:over', function(e) {
@@ -116,5 +191,14 @@ canvas.on('mouse:over', function(e) {
     canvas.renderAll();
   });
   
+/*
+canvas.on('mouse:wheel', function(e) {
+    window.location.replace("http://google.com");
+
+    });
+	*/
+	
+	
+
 
 
